@@ -33,6 +33,11 @@ cd tech_eazy_devops_somiyakhan07
 
 Step 2: Run the deployment script:
 
+Make the Script Executable
+Run this command in your terminal from inside the project foldder
+
+chmod +x deploy.sh
+
 For dev environment (default):
 
 ./deploy.sh dev
@@ -52,7 +57,7 @@ API Testing with Postman:
 
 After deployment, test the API with this GET request:
 
-http://<your-ec2-public-ip>/hello
+http://your ec2 public ip/hello
 
 Expected response:
 
