@@ -1,0 +1,32 @@
+{
+	"info": {
+		"_postman_id": "b6ed9129-fde9-46fc-9149-510c7fb2e8ea",
+		"name": "DevOps Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47045937",
+		"_collection_link": "https://cryosat-physicist-57386880-5849247.postman.co/workspace/079cc5c2-c246-4ddb-8647-08e967e58d3b/collection/47045937-b6ed9129-fde9-46fc-9149-510c7fb2e8ea?action=share&source=collection_link&creator=47045937"
+	},
+	"item": [
+		{
+			"name": "Hello API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://13.48.192.44/hello",
+					"protocol": "http",
+					"host": [
+						"13",
+						"48",
+						"192",
+						"44"
+					],
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,4 @@
+STAGE=prod
+INSTANCE_TYPE=t3.micro
+JAVA_VERSION=openjdk-21-jdk
+REPO=https://github.com/Trainings-TechEazy/test-repo-for-devops.git
