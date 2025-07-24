@@ -57,7 +57,7 @@ API Testing with Postman:
 
 After deployment, test the API with this GET request:
 
-http://your ec2 public ip/hello
+http://your-ec2-public-ip/hello
 
 Expected response:
 
