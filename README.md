@@ -82,6 +82,8 @@ This project automates cloud infrastructure provisioning using Terraform. It set
 
 ### 📁 Terraform Directory Structure
 
+````
+
 terraform/
 ├── main.tf
 ├── iam.tf
@@ -89,6 +91,8 @@ terraform/
 ├── s3.tf
 ├── variables.tf
 └── outputs.tf
+
+````
 
 ### 🧰 Tools & Services Used
 
@@ -118,7 +122,7 @@ Logs Stored in S3:
 
 ---
 
-## 👥 Collaborators (as required by TechEazy)
+## 👥 Collaborators
 
 Shivyandralwar2019@gmail.com
 
