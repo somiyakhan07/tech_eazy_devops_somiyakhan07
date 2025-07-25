@@ -75,7 +75,7 @@ Notes:
 - Tested using t3.micro EC2 instance (free-tier)
 - Repository contains only essential files
 
-## Assignment 2 – Terraform Automation: EC2 + S3 + IAM (Assignment 2 Branch) 
+## Assignment 2 – Terraform Automation: EC2 + S3 + IAM (Assignment-2 Branch) 
 
 This project automates deployment of a Spring Boot app using Terraform, EC2, IAM Roles, and S3.
 
@@ -87,7 +87,7 @@ How it works:
 - IAM Role B attached to EC2 with write-only access
 
 🌐 Live App URL:
-http://your-publiv-ip:8080/hello
+http://your-public-ip:8080/hello
 
  📦 Logs uploaded to S3:
 - s3://somiya-devops-logs/app/logs/app.log`
