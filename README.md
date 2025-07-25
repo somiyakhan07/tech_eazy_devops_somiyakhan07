@@ -29,6 +29,7 @@ Make sure you're on an EC2 Ubuntu instance with internet access.
 Step 1: Connect to EC2 and clone this repo:
 
 git clone https://github.com/somiyakhan07/tech_eazy_devops_somiyakhan07.git
+
 cd tech_eazy_devops_somiyakhan07
 
 Step 2: Run the deployment script:
