@@ -78,5 +78,4 @@ Notes:
 Author:
 
 Somiya Khan
-DevOps Intern
 GitHub: https://github.com/somiyakhan07
