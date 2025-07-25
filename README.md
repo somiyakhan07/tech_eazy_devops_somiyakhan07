@@ -75,7 +75,25 @@ Notes:
 - Tested using t3.micro EC2 instance (free-tier)
 - Repository contains only essential files
 
-Author:
+## Assignment 2 – Terraform Automation: EC2 + S3 + IAM (Assignment-2 Branch) 
 
-Somiya Khan
-GitHub: https://github.com/somiyakhan07
+This project automates deployment of a Spring Boot app using Terraform, EC2, IAM Roles, and S3.
+
+How it works:
+- EC2 instance is created via Terraform
+- Spring Boot app runs on port 8080
+- Logs (app.log, cloud-init.log) are uploaded to S3
+- S3 bucket has a 7-day lifecycle rule
+- IAM Role B attached to EC2 with write-only access
+
+🌐 Live App URL:
+http://your-public-ip:8080/hello
+
+ 📦 Logs uploaded to S3:
+- s3://somiya-devops-logs/app/logs/app.log`
+- s3://somiya-devops-logs/var/log/cloud-init.log`
+
+ 📁 To deploy:
+
+cd terraform
+terraform apply -var="bucket_name=somiya-devops-logs" -var="key_name=pem"
