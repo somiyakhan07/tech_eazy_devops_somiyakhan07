@@ -118,7 +118,7 @@ Logs Stored in S3:
 
 ---
 
-## 👥 Collaborators (as required by TechEazy)
+## 👥 Collaborators
 
 Shivyandralwar2019@gmail.com
 
