@@ -1,4 +1,4 @@
-DevOps Assignment 1 – Manual EC2 Deployment (AWS)
+DevOps Assignment 1 – Manual EC2 Deployment (AWS) (main Branch) 
 
 This assignment demonstrates the manual deployment of a Spring Boot application on an AWS EC2 instance using environment-specific configuration and a custom shell script. The project follows clean DevOps practices and is designed to support both dev and prod environments.
 
@@ -75,7 +75,7 @@ Notes:
 - Tested using t3.micro EC2 instance (free-tier)
 - Repository contains only essential files
 
-## Assignment 2 – Terraform Automation: EC2 + S3 + IAM
+## Assignment 2 – Terraform Automation: EC2 + S3 + IAM (Assignment 2 Branch) 
 
 This project automates deployment of a Spring Boot app using Terraform, EC2, IAM Roles, and S3.
 
