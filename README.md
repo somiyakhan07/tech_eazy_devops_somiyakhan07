@@ -82,6 +82,7 @@ This project automates cloud infrastructure provisioning using Terraform. It set
 
 ### 📁 Terraform Directory Structure
 
+
 terraform/
 ├── main.tf
 ├── iam.tf
@@ -89,6 +90,7 @@ terraform/
 ├── s3.tf
 ├── variables.tf
 └── outputs.tf
+
 
 ### 🧰 Tools & Services Used
 
