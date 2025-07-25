@@ -1,99 +1,142 @@
-DevOps Assignment 1 – Manual EC2 Deployment (AWS)
+# TechEazy DevOps Projects – EC2 Deployment & Cloud Automation
 
-This assignment demonstrates the manual deployment of a Spring Boot application on an AWS EC2 instance using environment-specific configuration and a custom shell script. The project follows clean DevOps practices and is designed to support both dev and prod environments.
+This repository showcases two DevOps projects completed during the TechEazy Consulting Internship. It demonstrates both manual and automated approaches to deploying cloud-native applications using AWS and DevOps best practices.
 
-Project Structure:
+---
+
+## 🚀 Project 1: Manual Deployment of Spring Boot Application on AWS EC2
+
+This project demonstrates the manual provisioning and deployment of a Spring Boot application on an AWS EC2 instance using shell scripting and environment-specific configuration files.
+
+### ✅ Features
+
+- Environment-based deployment support (dev/prod)
+- Installs Java, Maven, Git
+- Clones and builds a Spring Boot application from GitHub
+- Runs the application on port 80
+- Includes Postman collection for API testing
+
+### 📁 Project Structure
+
+```
 
 tech_eazy_devops_somiyakhan07/
-├── dev_config                   → Environment variables for dev
-├── prod_config                  → Environment variables for prod
-├── deploy.sh                    → Deployment script
+├── dev_config
+├── prod_config
+├── deploy.sh
 ├── resources/
-│   └── postman_collection.json  → API testing collection
-└── README.md                    → Project overview & usage
+│ └── postman_collection.json
+└── README.md
 
-Technologies Used:
+````
+
+### 🧰 Technologies Used
 
 - AWS EC2 (Ubuntu)
 - Java 21 (OpenJDK)
 - Maven
 - Spring Boot
-- Shell Scripting
-- Postman
+- Bash Scripting
 - Git & GitHub
+- Postman
 
-How to Deploy:
+### 🚀 Deployment Instructions
 
-Make sure you're on an EC2 Ubuntu instance with internet access.
+1. SSH into your EC2 Ubuntu instance.
+2. Clone the repository:
+  
+   git clone https://github.com/somiyakhan07/tech_eazy_devops_somiyakhan07.git
+   cd tech_eazy_devops_somiyakhan07
 
-Step 1: Connect to EC2 and clone this repo:
+3. Make the script executable:
+  
+   chmod +x deploy.sh
+   
+4. Run the deployment:
 
-git clone https://github.com/somiyakhan07/tech_eazy_devops_somiyakhan07.git
+   
+   ./deploy.sh        # for Dev environment
+   ./deploy.sh prod   # for Prod environment
+  
 
-cd tech_eazy_devops_somiyakhan07
+### 🔍 API Testing
 
-Step 2: Run the deployment script:
+Endpoint: `http://<your-ec2-public-ip>/hello`
+Expected Response: `Hello from Spring MVC!`
+Postman Collection: `resources/postman_collection.json`
 
-Make the Script Executable
-Run this command in your terminal from inside the project foldder
+---
 
-chmod +x deploy.sh
+## ⚙️ Project 2: Infrastructure Automation with Terraform – EC2, S3, IAM
 
-For dev environment (default):
+This project automates cloud infrastructure provisioning using Terraform. It sets up IAM roles, launches an EC2 instance with a write-only role, uploads logs to an S3 bucket, and applies lifecycle management.
 
-./deploy.sh dev
+### ✅ Features
 
-For prod environment:
+* Terraform automation for EC2, IAM, and S3
+* IAM Role B with write-only access attached to EC2 via instance profile
+* IAM Role A with read-only access used for log verification
+* S3 bucket name configured via variable (mandatory)
+* Uploads EC2 logs and application logs to S3
+* Lifecycle rule deletes logs after 7 days
 
-./deploy.sh prod
+### 📁 Terraform Directory Structure
 
-What the script does:
+terraform/
+├── main.tf
+├── iam.tf
+├── ec2.tf
+├── s3.tf
+├── variables.tf
+└── outputs.tf
 
-- Loads config from dev_config or prod_config
-- Installs Java, Maven, and Git
-- Clones the Spring Boot repo
-- Builds and runs the app on port 80
+### 🧰 Tools & Services Used
 
-API Testing with Postman:
+* AWS EC2
+* IAM (Roles & Instance Profile)
+* S3 (private bucket, lifecycle policy)
+* Terraform (Infrastructure as Code)
+* Bash scripting for log handling
 
-After deployment, test the API with this GET request:
-
-http://your-ec2-public-ip/hello
-
-Expected response:
-
-Hello from Spring MVC!
-
-Postman collection is available inside the resources folder:
-resources/postman_collection.json
-
-Notes:
-
-- Application runs on port 80 (required for assignment)
-- All values are configured via external config files
-- No secrets are hardcoded
-- Tested using t3.micro EC2 instance (free-tier)
-- Repository contains only essential files
-
-## Assignment 2 – Terraform Automation: EC2 + S3 + IAM (Assignment-2 Branch) 
-
-This project automates deployment of a Spring Boot app using Terraform, EC2, IAM Roles, and S3.
-
-How it works:
-- EC2 instance is created via Terraform
-- Spring Boot app runs on port 8080
-- Logs (app.log, cloud-init.log) are uploaded to S3
-- S3 bucket has a 7-day lifecycle rule
-- IAM Role B attached to EC2 with write-only access
-
-🌐 Live App URL:
-http://your-public-ip:8080/hello
-
- 📦 Logs uploaded to S3:
-- s3://somiya-devops-logs/app/logs/app.log`
-- s3://somiya-devops-logs/var/log/cloud-init.log`
-
- 📁 To deploy:
+### 🛠️ Deployment Instructions
 
 cd terraform
-terraform apply -var="bucket_name=somiya-devops-logs" -var="key_name=pem"
+terraform init
+terraform apply -var="bucket_name=somiya-devops-logs" -var="key_name=my-key"
+
+
+### 🌐 Application & Logs
+
+Application & Logs
+Application URL: http://<your-ec2-public-ip>:8080/hello
+
+Logs Stored in S3:
+
+/setup/logs/cloud-init.log
+
+/app/logs/app.log
+
+---
+
+## 👥 Collaborators (as required by TechEazy)
+
+Shivyandralwar2019@gmail.com
+
+dharesh.a.p@gmail.com
+
+cpandey05@gmail.com
+
+siddpawar583@gmail.com
+
+trainings.techeazyconsulting@gmail.com
+
+---
+
+## 📌 Notes
+No AWS secrets or access keys are hardcoded.
+
+All configurations are parameterized for stage-based deployment.
+
+Logs are securely archived with a 7-day lifecycle policy.
+
+The project follows DevOps best practices in both manual and automated environments
